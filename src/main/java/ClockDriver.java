@@ -1,3 +1,5 @@
+package src.main.java;
+
 
 public class ClockDriver
 {
@@ -14,8 +16,38 @@ public class ClockDriver
         //  * Tick test for 01:59 to 02:00
         //  * Tick test for 09:59 to 10:00
         //  * Tick test for 23:59 to 00:00
+        ClockDisplay test1 = new ClockDisplay();
+        String test1Output = test1.getTime();
+        System.out.println("Empty Con. Test - " + test1Output);
         
+        ClockDisplay test2 = new ClockDisplay(3, 45);
+        String test2Output = test2.getTime();
+        System.out.println("2 Arg. Con. Test - " + test2Output);
         
+        ClockDisplay tickTest1 = new ClockDisplay(3, 32);
+        System.out.println("Tick Test 1 Pretick - " + tickTest1.getTime());
+        tickTest1.timeTick();
+        System.out.println("Tick Test 1 Posttick - " + tickTest1.getTime());
+        
+        ClockDisplay tickTest2 = new ClockDisplay(3, 9);
+        System.out.println("Tick Test 2 Pretick - " + tickTest2.getTime());
+        tickTest2.timeTick();
+        System.out.println("Tick Test 2 Posttick - " + tickTest2.getTime());
+        
+        ClockDisplay tickTest3 = new ClockDisplay(1, 59);
+        System.out.println("Tick Test 3 Pretick - " + tickTest3.getTime());
+        tickTest3.timeTick();
+        System.out.println("Tick Test 3 Posttick - " + tickTest3.getTime());
+        
+        ClockDisplay tickTest4 = new ClockDisplay(9, 59);
+        System.out.println("Tick Test 4 Pretick - " + tickTest4.getTime());
+        tickTest4.timeTick();
+        System.out.println("Tick Test 4 Posttick - " + tickTest4.getTime());
+        
+        ClockDisplay tickTest5 = new ClockDisplay(23, 59);
+        System.out.println("Tick Test 5 Pretick - " + tickTest5.getTime());
+        tickTest5.timeTick();
+        System.out.println("Tick Test 5 Posttick - " + tickTest5.getTime());
         //Implement tests for your ClockDisplaySeconds
         //  * Test that you can do the basics
         //      * Empty constructor & read time
