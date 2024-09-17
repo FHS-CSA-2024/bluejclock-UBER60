@@ -63,7 +63,13 @@ public class ClockDisplay12Hour
                 out = hour.getDisplayValue() + ":" + minute.getDisplayValue() + "AM";
             }
         }else{
-            out = "" + (hour.getValue()-12) + ":" + minute.getDisplayValue() + "PM";
+            if (hour.getvalue() == 12){
+                out = "12" + ":" + minute.getDisplayValue() + "PM";
+            } else if (hour.getvalue() > 21){
+                out = "" + (hour.getValue()-12) + ":" + minute.getDisplayValue() + "PM";
+            } else{
+                out = "0" + (hour.getValue()-12) + ":" + minute.getDisplayValue() + "PM";
+            }
         }
         display = out;
     }
