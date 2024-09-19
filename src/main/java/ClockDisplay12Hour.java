@@ -63,9 +63,9 @@ public class ClockDisplay12Hour
                 out = hour.getDisplayValue() + ":" + minute.getDisplayValue() + "AM";
             }
         }else{
-            if (hour.getvalue() == 12){
+            if (hour.getValue() == 12){
                 out = "12" + ":" + minute.getDisplayValue() + "PM";
-            } else if (hour.getvalue() > 21){
+            } else if (hour.getValue() > 21){
                 out = "" + (hour.getValue()-12) + ":" + minute.getDisplayValue() + "PM";
             } else{
                 out = "0" + (hour.getValue()-12) + ":" + minute.getDisplayValue() + "PM";
