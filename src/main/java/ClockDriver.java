@@ -97,6 +97,12 @@ public class ClockDriver
         //  * Tick test for 11:59PM to 12:00AM
         //  * Tick test for 11:59AM to 12:00PM
         //  * Tick test for 12:59PM to 01:00PM
+        ClockDisplay12Hour Test1AMPM = new ClockDisplay12Hour();
+        System.out.println("AMPM Test 1 no Args. - " + Test1AMPM.getTime());
+
+        ClockDisplay12Hour Test2AMPM = new ClockDisplay12Hour(3,45);
+        System.out.println("AMPM Test 2 Args. - " + Test2AMPM.getTime());
+     
         ClockDisplay12Hour tickTest1AMPM = new ClockDisplay12Hour(15,32);
         System.out.println("AMPM Tick Test 1 Pretick - " + tickTest1AMPM.getTime());
         tickTest1AMPM.timeTick();
